@@ -38,3 +38,8 @@ Feel free to send PRs to add support for more API calls.
 ## Development
 
 TBD
+
+
+## License
+
+The project is licensed under the [MIT License](LICENSE).
