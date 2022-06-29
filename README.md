@@ -37,12 +37,4 @@ Feel free to send PRs to add support for more API calls.
 
 ## Development
 
-When all coding and testing is done, please run the test suite:
-
-```shell
-make check
-```
-
-For the best developer experience, install [Nix](https://builtwithnix.org/) and [direnv](https://direnv.net/).
-
-Alternatively, install Go manually or using a package manager. Install the rest of the dependencies by running `make deps`.
+TBD
