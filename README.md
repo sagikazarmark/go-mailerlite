@@ -28,7 +28,7 @@ The following groups of API calls are supported by the client:
 - [ ] Groups
 - [ ] Fields
 - [ ] Webhooks
-- [ ] Stats
+- [x] Stats
 - [ ] Settings
 - [ ] Batch
 
