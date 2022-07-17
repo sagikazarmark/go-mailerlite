@@ -35,6 +35,21 @@ The following groups of API calls are supported by the client:
   - [ ] Activity
   - [ ] Activity (by type)
 - [ ] Groups
+  - [ ] List
+  - [ ] Get
+  - [ ] Search
+  - [ ] Create
+  - [ ] Update
+  - [ ] Delete
+  - [x] Add subscriber
+  - [ ] Import subscribers
+  - [ ] Get imports
+  - [ ] Add subscriber (with group name)
+  - [ ] Assign subscriber
+  - [ ] List subscribers
+  - [ ] List subscribers (by type)
+  - [ ] Get subscriber
+  - [ ] Delete subscriber
 - [x] Fields
 - [ ] Webhooks
 - [x] Stats
