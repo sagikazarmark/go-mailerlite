@@ -35,7 +35,7 @@ The following groups of API calls are supported by the client:
   - [ ] Activity
   - [ ] Activity (by type)
 - [ ] Groups
-- [ ] Fields
+- [x] Fields
 - [ ] Webhooks
 - [x] Stats
 - [ ] Settings
