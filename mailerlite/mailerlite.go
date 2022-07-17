@@ -19,7 +19,7 @@ const (
 	defaultBaseURL = "https://api.mailerlite.com/api/v2/"
 	userAgent      = "go-mailerlite"
 
-	headerAPIKey = "X-MailerLite-ApiKey"
+	headerAPIKey = "X-MailerLite-ApiKey" // nolint: gosec
 )
 
 // A Client manages communication with the MailerLite API.
@@ -205,7 +205,7 @@ func (c *Client) Do(req *http.Request, v interface{}) (*Response, error) {
 
 	default:
 		decErr := json.NewDecoder(resp.Body).Decode(v)
-		if decErr == io.EOF {
+		if decErr == io.EOF { // nolint: errorlint
 			decErr = nil // ignore EOF errors caused by empty response body
 		}
 
@@ -280,7 +280,8 @@ func CheckResponse(r *http.Response) error {
 	errorResponse := &ErrorResponse{Response: r}
 	data, err := ioutil.ReadAll(r.Body)
 	if err == nil && data != nil {
-		json.Unmarshal(data, errorResponse)
+		// ignore error (we are already in an error scenario)
+		_ = json.Unmarshal(data, errorResponse)
 	}
 
 	return errorResponse
