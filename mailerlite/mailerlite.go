@@ -134,6 +134,13 @@ func NewClient(apiKey string, opts ...ClientOption) (*Client, error) {
 	return c, nil
 }
 
+// ListOptions specifies the optional parameters to various List methods that
+// support pagination.
+type ListOptions struct {
+	Offset int `url:"offset,omitempty"`
+	Limit  int `url:"limit,omitempty"`
+}
+
 // NewRequest creates an API request. A relative URL can be provided in urlStr,
 // in which case it is resolved relative to the baseURL of the Client.
 // Relative URLs should always be specified without a preceding slash. If

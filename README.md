@@ -25,6 +25,15 @@ The following groups of API calls are supported by the client:
 - [ ] Campaigns
 - [ ] Segments
 - [ ] Subscribers
+  - [x] List
+  - [ ] Create
+  - [x] Get
+  - [ ] Update
+  - [ ] Search
+  - [ ] Search (minimized)
+  - [ ] List groups
+  - [ ] Activity
+  - [ ] Activity (by type)
 - [ ] Groups
 - [ ] Fields
 - [ ] Webhooks
