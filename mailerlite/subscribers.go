@@ -27,7 +27,7 @@ type Subscriber struct {
 	ConfirmationIP        *string           `json:"confirmation_ip"`
 	ConfirmationTimestamp *string           `json:"confirmation_timestamp"`
 	Fields                []SubscriberField `json:"fields"`
-	DateSubscribe         Timestamp         `json:"date_subscribe"`
+	DateSubscribe         *Timestamp        `json:"date_subscribe"`
 	DateUnsubscribe       *Timestamp        `json:"date_unsubscribe"`
 	DateCreated           Timestamp         `json:"date_created"`
 	DateUpdated           *Timestamp        `json:"date_updated"`
