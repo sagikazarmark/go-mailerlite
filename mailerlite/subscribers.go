@@ -14,14 +14,14 @@ type SubscribersService service
 
 // Subscriber represents an email subscriber.
 type Subscriber struct {
-	ID                    int               `json:"id"`
-	Name                  string            `json:"name"`
-	Email                 string            `json:"email"`
-	Sent                  int               `json:"sent"`
-	Opened                int               `json:"opened"`
-	Clicked               int               `json:"clicked"`
-	Type                  SubscriptionType  `json:"type"`
-	CountryID             string            `json:"country_id"`
+	ID      int              `json:"id"`
+	Name    string           `json:"name"`
+	Email   string           `json:"email"`
+	Sent    int              `json:"sent"`
+	Opened  int              `json:"opened"`
+	Clicked int              `json:"clicked"`
+	Type    SubscriptionType `json:"type"`
+	// CountryID             string            `json:"country_id"`
 	SignupIP              *string           `json:"signup_ip"`
 	SignupTimestamp       *string           `json:"signup_timestamp"`
 	ConfirmationIP        *string           `json:"confirmation_ip"`
