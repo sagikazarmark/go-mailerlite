@@ -106,4 +106,30 @@ func (s *SubscribersService) Get(ctx context.Context, email string) (*Subscriber
 	return &subscriber, resp, nil
 }
 
-// TODO: update
+// SubscriberUpdate
+type SubscriberUpdate struct {
+	Name                 string            `json:"name,omitempty"`
+	Type                 SubscriptionType  `json:"type,omitempty"`
+	Fields               []SubscriberField `json:"fields,omitempty"`
+	ResendAutoresponders *bool             `json:"resend_autoresponders,omitempty"`
+}
+
+// Update updates a subscriber.
+//
+// MailerLite API docs: https://developers.mailerlite.com/reference/update-subscriber
+func (s *SubscribersService) Update(ctx context.Context, email string, update SubscriberUpdate) (*Subscriber, *Response, error) {
+	u := fmt.Sprintf("subscribers/%s", email)
+
+	req, err := s.client.NewRequest(ctx, http.MethodPut, u, update)
+	if err != nil {
+		return nil, nil, err
+	}
+
+	var subscriber Subscriber
+	resp, err := s.client.Do(req, &subscriber)
+	if err != nil {
+		return nil, resp, err
+	}
+
+	return &subscriber, resp, nil
+}
